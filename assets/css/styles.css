@@ -1,0 +1,1282 @@
+/* Variables */
+:root {
+    --blue-150    : #10265f;
+    --blue-100    : #26438F;
+    --blue-50     : #CBD1E5;
+    --blue-0      : #F7F8FC;
+    --skyBlue-100 : #5AA3D7;
+    --skyBlue-50  : #ADD6F3;
+    --skyBlue-0   : #EAF6FF;
+    --grey-100    : #333333;
+    --grey-50     : #C0BFBF;
+    --grey-0      : #F2F2F2;
+    --white: #fff;
+    --action-first: #d4edda;
+    --action-sec  : #EC5F59;
+    --action-third: #F6DFA8;
+    --font-xlTitle: 22px;
+    --font-lTitle : 18px;
+    --font-normal : 14px;
+    --font-small  : 12px;
+    --font-button : 13px;
+    --transition  : all .4s ease-in-out;
+    --shadow-box: 0 0 15px rgb(0 0 0 / 20%);
+}
+
+
+/* Estilos generales */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family           : "Rubik", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing   : antialiased;
+    -o-font-smoothing     : antialiased;
+    color                 : var(--grey-100);
+    font-size             : var(--font-normal);
+    font-weight           : 400;
+}
+.psAppPcte-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+
+/* Slick */
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.slick-dots li {
+    list-style-type: none;
+    margin: 0 .2rem;
+}
+.slick-dots li button {
+    font-size: 0;
+    width: 7px;
+    height: 12px;
+    background-color: var(--grey-0);
+    transition: var(--transition);
+    border: 0;
+    line-height: 1;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.slick-dots li.slick-active button {
+    background-color: var(--blue-100);
+}
+
+
+/* Titles */
+.psAppPcte-xlTitle {
+    font-weight: 600;
+    font-size: var(--font-xlTitle);
+}
+.psAppPcte-lTitle {
+    font-weight: 600;
+    font-size: var(--font-lTitle);
+}
+
+
+/* Buttons */
+.psAppPcte-mainButton {
+    display: inline-block !important;
+    font-size: var(--font-button) !important;
+    color: #fff !important;
+    background-color: var(--blue-100) !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--blue-100)!important;
+    line-height: 1!important;
+    height: 37px!important;
+    font-weight: 600!important;
+    padding-top: 2px!important;
+    padding-inline: 30px !important;
+    width: fit-content !important;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte-mainButton:hover,
+.psAppPcte-mainButton:focus,
+.psAppPcte-mainButton:active {
+    transition: var(--transition);
+    background-color: var(--blue-150) !important;
+    box-shadow: var(--shadow-box)
+}
+.psAppPcte-secondButton {
+    font-weight: 600;
+    color: var(--blue-100);
+    background-color: transparent;
+    font-size: var(--font-button);
+    border: 0;
+    background-color: none;
+    line-height: 1;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte-secondButton:hover,
+.psAppPcte-secondButton:focus,
+.psAppPcte-secondButton:active {
+    transition: var(--transition);
+    opacity: .6;
+}
+.psAppPcte-mainButton.buttonUnactive {
+    color: var(--grey-100) !important;
+    background-color: var(--grey-50) !important;
+    border: 1px solid var(--grey-50)!important;
+    cursor: not-allowed;
+    transition: var(--transition);
+}
+
+
+/* Header */
+.psAppPcte .psAppPcte--header {
+    padding: .7rem 0;
+    border-bottom: 1px solid var(--grey-0);
+    box-shadow: var(--shadow-box);
+    margin-bottom: 3rem;
+}
+.psAppPcte .psAppPcte--header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.psAppPcte .psAppPcte--header-logo img {
+    width: 130px;
+    max-width: 130px;
+    min-width: 130px;
+}
+.psAppPcte .psAppPcte--header-menu {
+    position: relative;
+}
+.psAppPcte .psAppPcte--header-menu img {
+    width: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    height: auto;
+}
+.psAppPcte .psAppPcte--header-menu img:hover {
+    opacity: .6;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte--header-user {
+    width: 45px;
+    height: 45px;
+    background-color: var(--grey-0);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte .psAppPcte--header-user span {
+    font-weight: 700;
+    color: var(--grey-50);
+}
+
+/* Header Menu */
+.psAppPcte .psAppPcte--header-menu-wrapper {
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    background-color: var(--white);
+    box-shadow: var(--shadow-box);
+    top: 0;
+    left: -100%;
+    z-index: 5;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+.showMenu {
+    transition: var(--transition);
+    left: 0 !important;
+}
+.psAppPcte .psAppPcte--header-menu-close {
+    display: flex;
+    margin-bottom: 3rem;
+    width: fit-content;
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte--header-menu-close img {
+    width: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte--header-menu-close img:hover,
+.psAppPcte .psAppPcte--header-menu-close img:focus,
+.psAppPcte .psAppPcte--header-menu-close img:active {
+    opacity: .6;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte--header-menu-items ul {
+    list-style-type: none;
+    padding: 0 0 3rem 0;
+    border-bottom: 1px solid var(--grey-50);
+}
+.psAppPcte .psAppPcte--header-menu-items ul li {
+    margin-bottom: 1.5rem;
+}
+.psAppPcte .psAppPcte--header-menu-items ul li:last-child {
+    margin-bottom: 0;
+}
+.psAppPcte .psAppPcte--header-menu-items ul li a {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    align-items: center;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte--header-menu-items ul li a:hover {
+    transition: var(--transition);
+    opacity: .6;   
+}
+.psAppPcte .psAppPcte--header-menu-items ul li a img {
+    width: 25px;
+    max-width: 25px;
+    display: inline-block;
+}
+.psAppPcte .psAppPcte--header-menu-items ul li a span {
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 1rem;
+    font-weight: 500;
+    color: var(--grey-100);
+}
+.psAppPcte .psAppPcte--header-menu-logout{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte--header-menu-logout:hover {
+    transition: var(--transition);
+    opacity: .6;   
+}
+.psAppPcte .psAppPcte--header-menu-logout img {
+    width: 20px;
+    max-width: 20px;
+    display: inline-block;
+}
+.psAppPcte .psAppPcte--header-menu-logout span {
+    font-weight: 500;
+    color: var(--grey-50);
+    display: inline-block;
+    margin-left: .7rem;
+}
+
+
+/* Form Fields */
+.psAppPcte fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+}
+.psAppPcte label {
+    color: var(--grey-100);
+    font-weight: 500;
+    margin-bottom: .3rem;
+}
+.psAppPcte select {
+    height: 40px;
+    border: 1px solid var(--grey-50);
+    border-radius: 4px;
+    transition: var(--transition);
+    padding: 0 .8rem;
+    font-size: var(--font-small);
+    color: var(--grey-100);
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+}
+.psAppPcte input {
+    height: 40px;
+    border: 1px solid var(--grey-50);
+    border-radius: 4px;
+    transition: var(--transition);
+    padding: 0 .8rem;
+    font-size: var(--font-small);
+    color: var(--grey-100);
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+}
+.psAppPcte fieldset:has(input[type="password"])  {
+    position: relative;
+}
+.psAppPcte input[type="password"] + .fa-eye {
+    position: absolute;
+    top: 68%;
+    transform: translateY(-50%);
+    right: 1rem;
+    cursor: pointer;
+    color: var(--sec-txt-color);
+}
+.psAppPcte input::placeholder {
+    opacity: .5;
+}
+.psAppPcte input.wrong {
+    border: 1px solid var(--action-sec) !important;
+}
+.psAppPcte span.wrong {
+    color: var(--action-sec);
+}
+.psAppPcte .psAppPcte-form-state {
+    font-weight: 500;
+    font-size: var(--font-small);
+    display: inline-block;
+    margin-top: .2rem;
+}
+
+
+
+/* Slider Inicio */
+.psAppPcte .psAppPcte-inicio--main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.psAppPcte .psAppPcte-inicio--slider {
+    width: 100vw;
+    height: 80%;
+}
+.psAppPcte .psAppPcte-inicio--slider-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.psAppPcte .psAppPcte-inicio--slider-item img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.psAppPcte .psAppPcte-inicio--slider-item-wrapperText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+}
+.psAppPcte .psAppPcte-inicio--slider-item-wrapperText h2 {
+    margin-top: 2.5rem;
+    margin-bottom: .7rem;
+    text-align: center;
+}
+.psAppPcte .psAppPcte-inicio--slider-item-wrapperText p {
+    margin: 0;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.psAppPcte .psAppPcte-inicio--actions {
+    height: 20%;
+}
+.psAppPcte .psAppPcte-inicio--actions-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+
+/* Inicio Sesión */
+.psAppPcte .psAppPcte-inicioSesion--header > div {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.psAppPcte .psAppPcte-logo {
+    width: 170px;
+    display: block;
+    margin-bottom: 1rem;
+}
+.psAppPcte .psAppPcte-inicioSesion--header h2 {
+    text-align: center;
+    font-size: var(--font-xlTitle);
+}
+.psAppPcte .psAppPcte-inicioSesion-fieldsetSubmit {
+    align-items: center;
+    display: flex;
+}
+
+
+/* Recuperar contraseña */
+.psAppPcte .psAppPcte-recPass--header {
+    text-align: center;
+    margin-top: 3rem;
+}
+.psAppPcte .psAppPcte-recPass-fieldsetSubmit {
+    display: flex;
+    align-items: center;
+}
+
+
+/* Registro de paciente */
+.psAppPcte .psAppPcte-regPcte--header {
+    text-align: center;
+    margin-top: 3rem;
+}
+.psAppPcte .psAppPcte-regPcte-fieldsetSubmit {
+    display: flex;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-regPcte-fieldsetSubmit input {
+    width: 170px !important;
+}
+.psAppPcte .psAppPcte-regPcte-fieldsetSubmit button {
+    margin-top: .5rem;
+    width: 170px !important;
+}
+.psAppPcte .psAppPcte-form-stateInfo {
+    font-size: var(--font-small);
+    color: var(--grey-50);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: .2rem;
+}
+
+
+/* Account*/
+.psAppPcte .psAppPcte-regPcteAccount-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.psAppPcte .psAppPcte-regPcteAccount-headWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-iniciales > div {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--grey-0);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-iniciales > div span {
+    font-size: var(--font-xlTitle);
+    font-weight: 800;
+    color: var(--grey-50);
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-content-dateWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-content-date {
+    font-size: var(--font-small);
+    margin-top: .3rem;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-content-edit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: .5rem;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-content-edit span {
+    color: var(--skyBlue-100);
+    font-weight: 500;
+    display: inline-block;
+}
+.psAppPcte .psAppPcte-regPcteAccount-head-content-edit img {
+    width: 15px;
+    display: inline-block;
+    margin-left: .3rem;
+}
+.psAppPcte .psAppPcte-regPcteAccount--wrapperForm-title {
+    padding: 2rem 0 0 0;
+    margin-top: 2rem;
+    border-top: 2px dashed var(--grey-50);
+}
+
+/* Edit Account*/
+.psAppPcte .psAppPcte-regPcteAccountEdit-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-headWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-iniciales > div {
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--grey-0);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-iniciales > div span {
+    font-size: var(--font-xlTitle);
+    font-weight: 800;
+    color: var(--grey-50);
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-content-dateWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-content-date {
+    font-size: var(--font-small);
+    margin-top: .3rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-content-edit {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-top: .5rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-content-edit span {
+    color: var(--skyBlue-100);
+    font-weight: 500;
+    display: inline-block;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-head-content-edit img {
+    width: 15px;
+    display: inline-block;
+    margin-left: .3rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit--wrapperForm-title {
+    padding: 2rem 0 0 0;
+    margin-top: 2rem;
+    border-top: 2px dashed var(--grey-50);
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-fieldsetSubmit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-fieldsetSubmit input {
+    margin-bottom: .5rem;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit-fieldsetSubmit input,
+.psAppPcte .psAppPcte-regPcteAccountEdit-fieldsetSubmit button {
+    width: 180px !important;
+}
+.psAppPcte .psAppPcte-regPcteAccountEdit--form-inputRut {
+    background-color: var(--grey-0);
+    color: var(--grey-100);
+}
+
+
+/* Entrada */
+.psAppPcte .psAppPcte-entrada--header {
+    margin-top: 3rem;
+}
+.psAppPcte .psAppPcte-entrada--button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.psAppPcte .psAppPcte-entrada--wrapperIcon {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+}
+.psAppPcte .psAppPcte-entrada--wrapperIcon figure {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 0 1rem 0;
+}
+.psAppPcte .psAppPcte-entrada--wrapperIcon figure:last-child {
+    margin-bottom: 0;
+}
+.psAppPcte .psAppPcte-entrada--wrapperIcon figure img {
+    display: inline-block;
+    width: 70px;
+    margin-right: 1.5rem;    
+}
+
+
+/* Historial */
+.psAppPcte .psAppPcte-historial--title {
+    padding-bottom: 1rem;
+    border-bottom: 2px dashed var(--grey-50);
+}
+.psAppPcte .psAppPcte-historial--items {
+    box-sizing: border-box;
+    background-color: var(--blue-0);
+    border-radius: 7px;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+.psAppPcte .psAppPcte-historial--items-title {
+    background-color: var(--blue-50);
+    border-radius: 7px;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0;
+}
+.psAppPcte .psAppPcte-historial--items-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 1.5rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-item {
+    background-color: var(--white);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+.psAppPcte .psAppPcte-historial--items-list-item:last-child {
+    margin-bottom: 0;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine {
+    border-radius: 4px;
+    box-shadow: 0 0 13px rgb(102 102 102 / 20%);
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 1rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent img {
+    max-width: 50px;
+    width: 50px;
+    margin-right: 1rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-content-productName {
+    margin: 0;
+    font-size: var(--font-normal);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-content-ultimaCompra {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+    font-size: var(--font-small);
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-content-cantidadTotal {
+    margin-bottom: 0.2rem;
+    font-size: var(--font-small);
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-content-ultimaCompra span:first-child,
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-content-cantidadTotal span:first-child {
+    font-weight: 500;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-mainContent-discount {
+    background-color: var(--blue-100);
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 0.5rem;
+    line-height: 1;
+    border-radius: 4px 0 0 4px;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-detailBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .7rem;
+    border-top: 2px solid var(--grey-0);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-detailBar-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-detailBar-text span {
+    font-size: var(--font-small);
+    font-weight: 500;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-detailBar-text img {
+    width: 17px;
+    max-width: 17px;
+    display: inline-block;
+    margin-right: .4rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-medicine-detailBar-arrow svg {
+    width: 14px;
+    max-width: 14px;
+    height: auto;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-historial--items-list-detail {
+    transition: var(--transition);
+    height: 0;
+    overflow: hidden;
+    padding: 0 .7rem;
+}
+.psAppPcte .psAppPcte-historial--items-list-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-small);
+    font-weight: 500;
+    padding: .3rem 0;
+}
+.psAppPcte .psAppPcte-historial--items-list-detail-row > span,
+.psAppPcte .psAppPcte-historial--items-list-detail-header > span {
+    width: 25%;
+    max-width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.psAppPcte .psAppPcte-historial--items-list-detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-small);
+    padding: .3rem 0;
+}
+.psAppPcte .psAppPcte-historial--items-list-detail-row:nth-child(odd) {
+    background-color: #f4f4f4;
+}
+.psAppPcte .showDetail {
+    transition: var(--transition);
+    height: auto;
+    overflow: visible;
+    padding: 0.7rem;
+}
+.psAppPcte .rotateDetail {
+    transition: var(--transition);
+    transform: rotate(180deg);
+}
+
+
+/* Busca Medicamentos */
+.psAppPcte .psAppPcte-buscaMeds--titleIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px dashed var(--grey-50);
+    padding-bottom: 1rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--title {
+    margin: 0;
+}
+.psAppPcte .psAppPcte-buscaMeds--icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--skyBlue-100);
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--shadow-box);
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds--icon:hover {
+    transition: var(--transition);
+    background-color: var(--skyBlue-0);
+}
+.psAppPcte .psAppPcte-buscaMeds--icon img {
+    display: inline-block;
+    width: 18px;
+    max-width: 18px;
+}
+.psAppPcte .psAppPcte-buscaMeds--search {
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-bottom: 2px dashed var(--grey-50);
+}
+.psAppPcte .psAppPcte-buscaMeds--search form {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-buscaMeds--search form::before {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 52%;
+    transform: translateY(-50%);
+    z-index: 2;
+    height: 25px;
+    width: 26px;
+    background-image: url(../img/busca-medicamentos/psAppPaciente--search.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds--search form input[type="text"] {
+    box-shadow: 0 2px 5px rgba(102, 102, 102, 0.2);
+    width: calc(100% - 60px);
+}
+.psAppPcte .psAppPcte-buscaMeds--search form input[type="submit"] {
+    width: 45px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0;
+    background-color: var(--skyBlue-100);
+    border: 1px solid var(--skyBlue-100);
+    transition: var(--transition);
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds--search form input[type="submit"]:hover {
+    opacity: .5;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds--search small {
+    color: var(--grey-50);
+    font-size: var(--font-small);
+    display: inline-block;
+    margin-top: .5rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    border: 1px solid var(--grey-50);
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1.3rem 0.5rem 0.5rem;
+    border-right: 1px solid var(--grey-50);
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter {
+    position: fixed;
+    height: 100vh;
+    width: 90%;
+    top: 0;
+    left: -100%;
+    z-index: 9;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds--filter.showFilter {
+    left: 0;
+    transition: var(--transition);
+}
+.psAppPcte-buscaMeds--filterBar-filter-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte-buscaMeds--filterClose {
+    display: inline-block;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter h4 {
+    font-size: var(--font-normal);
+    font-weight: 500;
+    margin-bottom: .3rem;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter h4 span {
+    display: inline-block;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter .ui-accordion-header-icon {
+    background-image: url(../img/busca-medicamentos/psAppPaciente--arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.psAppPcte-buscaMeds--filterWrapper {
+    background-color: var(--blue-0);
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    border-right: 1px solid var(--grey-0);
+    box-shadow: var(--shadow-box);
+}
+/* .psAppPcte-buscaMeds--filterWrapper::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+} */
+.psAppPcte .psAppPcte-buscaMeds--filterClose > img {
+    display: inline-block !important;
+    width: 16px !important;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter-region {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--grey-50);
+    margin-bottom: 2rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter-category-group,
+.psAppPcte .psAppPcte-buscaMeds--filter-comuna-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .5rem 0;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter-category-group input,
+.psAppPcte .psAppPcte-buscaMeds--filter-comuna-group input {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter-category-group label,
+.psAppPcte .psAppPcte-buscaMeds--filter-comuna-group label {
+    margin: 0 0 0 .7rem;
+    font-weight: 400;
+}
+.psAppPcte .psAppPcte-buscaMeds--filter-category h4 {
+    border-bottom: 1px solid var(--grey-50);
+    padding: .7rem 0;
+}
+
+
+.psAppPcte .psAppPcte-buscaMeds--filterBar-filter img {
+    width: 20px;
+    display: inline-block;
+    margin-right: .5rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-filter span {
+    font-size: var(--font-normal);
+    font-weight: 500;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-results {
+    padding-right: 0.5rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-products ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.psAppPcte .psAppPcte-buscaMeds-products li {
+    width: 46.7%;
+    box-sizing: border-box;
+    border: 2px solid var(--grey-50);
+    border-radius: 5px;
+    padding: 2rem 0.5rem 0 0.5rem;
+    position: relative;
+    margin: 0.3rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-products-image > img {
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0.3rem 0 0.3rem;
+    box-sizing: border-box;
+}
+.psAppPcte .psAppPcte-buscaMeds-products-image-discount {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-weight: 500;
+    color: var(--white);
+    background-color: var(--blue-100);
+    border-radius: 4px 0 0 4px;
+    padding: .5rem;
+    line-height: 1;
+    font-size: var(--font-normal);
+}
+.psAppPcte .psAppPcte-buscaMeds-products-image-flag {
+    position: absolute;
+    top: 15px;
+    background-color: var(--grey-0);
+    left: 0;
+    padding: 0.4rem;
+    box-sizing: border-box;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+}
+.psAppPcte .psAppPcte-buscaMeds-products-image-flag img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.psAppPcte .psAppPcte-buscaMeds-products-nameWrapper {
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--grey-50);
+}
+.psAppPcte .psAppPcte-buscaMeds-products-name {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: var(--font-normal);
+}
+.psAppPcte .psAppPcte-buscaMeds-products-cat {
+    font-weight: 500;
+    color: var(--grey-50);
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar {
+    flex-direction: column-reverse;
+    display: flex;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0.7rem;
+    flex-direction: column-reverse;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-actions-add {
+    height: 35px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    transition: var(--transition);
+    background-color: var(--skyBlue-100);
+    font-size: var(--font-button);
+    line-height: 1;
+    border: 1px solid var(--skyBlue-100);
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-actions-add:hover {
+    transition: var(--transition);
+    opacity: .6;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-actions-dcto {
+    color: var(--blue-100);
+    font-weight: 500;
+    border: 0;
+    background-color: transparent;
+    line-height: 1;
+    padding-top: .2rem;
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-detail {
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-detail.showDiscount {
+    height: auto !important;
+    border-top: 1px solid var(--grey-50) !important;
+    padding: 1rem 0 !important;
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-actions-dcto img {
+    width: 17px;
+    transition: var(--transition);
+}
+.psAppPcte-buscaMeds-bottomBar-detail.showDiscount ~ .psAppPcte-buscaMeds-bottomBar-actions img {
+    transform: rotate(180deg);
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds-bottomBar-detail p {
+    margin: 0;
+    text-align: center;
+    font-weight: 500;
+    color: var(--grey-50);
+}
+.psAppPcte .psAppPcte-buscaMeds-pages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-pages-actual {
+    height: 35px;
+    background-color: var(--grey-0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--grey-50);
+    margin: 0 .5rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-pages span {
+    height: 35px;
+    background-color: var(--skyBlue-0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: var(--skyBlue-100);
+    margin: 0 .2rem;
+    cursor: pointer;
+}
+.psAppPcte .psAppPcte-buscaMeds-pages-anterior,
+.psAppPcte .psAppPcte-buscaMeds-pages-siguiente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Busca Farmacias */
+.psAppPcte .psAppPcte-buscaMeds--filterBar-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-right: 0;
+    padding-left: 2.7rem;
+    border-left: 1px solid var(--grey-50);
+    height: 100%;
+    position: relative;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-grid img {
+    width: 20px;
+    max-width: 20px;
+    transition: var(--transition);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+}
+.psAppPcte .psAppPcte-buscaMeds-farm > ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 2rem 0;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-items {
+    list-style-type: none;
+    width: 46.7%;
+    border: 2px solid var(--grey-0);
+    border-radius: 7px;
+    overflow: hidden;
+    margin: .3rem;
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-grid-gridH.showGrid {
+    display: none !important;
+    transition: var(--transition);
+}
+.psAppPcte .psAppPcte-buscaMeds--filterBar-grid-grid.showGrid {
+    display: none !important;
+    transition: var(--transition);
+}
+
+.psAppPcte .psAppPcte-buscaMeds-farm-items.gridLayout {
+    display: flex;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-items.gridLayout .psAppPcte-buscaMeds-farm-image {
+    width: 50%;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-items.gridLayout {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.psAppPcte .psAppPcte-buscaMeds-farm-image {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-image img {
+    width: 100%;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul {
+    background-color: var(--blue-0);
+    margin: .5rem;
+    padding: .7rem;
+    border-radius: 5px;
+    list-style-type: none;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: .9rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li:last-child {
+    margin-bottom: 0;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li > div:first-child,
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li > div:first-child,
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li > div:first-child {
+    width: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right: .5rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li > div:last-child {
+    width: calc(100% - 25px);
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list-ubicacion-icon img,
+.psAppPcte .psAppPcte-buscaMeds-farm-list-horarios-icon img {
+    display: inline-block;
+    width: 22px;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list-telefono-icon img {
+    display: inline-block;
+    width: 25px;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list-horarios-content ul {
+    padding: 0;
+    list-style-type: none;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li span,
+.psAppPcte .psAppPcte-buscaMeds-farm-list > ul > li a {
+    font-size: var(--font-small);
+    text-decoration: none;
+    color: var(--grey-100);
+    font-weight: 400;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list-horarios-content ul > li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .3rem;
+}
+.psAppPcte .psAppPcte-buscaMeds-farm-list-horarios-content ul > li:last-child {
+    margin-bottom: 0;
+}

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Inicio Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaporte Salud | App Paciente</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<!-- Fin Head -->
+
+<!-- PS - App Paciente / Historial -->
+<body class="psAppPcte psAppPcte-historial">
+
+
+    <!-- Header -->
+    <header class="psAppPcte--header">
+        <div class="psAppPcte-container">
+            <div class="psAppPcte--header-menu">
+                <img src="assets/img/header/psAppPcte-menu.svg" alt="Header Menu">
+                <div class="psAppPcte--header-menu-wrapper">
+                    <div class="psAppPcte--header-menu-content">
+                        <div class="psAppPcte--header-menu-close">
+                            <img src="assets/img/header/psAppPcte-close.svg" alt="Close">
+                        </div>
+                        <div class="psAppPcte--header-menu-items">
+                            <ul>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-historial-descuentos.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Historial de descuentos</span>
+                                    </a>
+                                </li>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-busca-farmacia.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Busca tu farmacia</span>
+                                    </a>
+                                </li>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-busca-medicamentos.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Busca tus medicamentos</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="psAppPcte--header-menu-logout">
+                        <img src="assets/img/header/psAppPcte-cerrar-sesion.svg" alt="Cerrar sesión">
+                        <span>Cerrar sesión</span>
+                    </div>
+                </div>
+            </div>
+            <div class="psAppPcte--header-logo">
+                <img src="assets/img/psAppPcte-logo.jpg" alt="Logo Pasaporte Salud App Paciente">
+            </div>
+            <div class="psAppPcte--header-user">
+                <span class="psAppPcte--header-user-firstName">J</span>
+                <span class="psAppPcte--header-user-lastName">R</span>
+            </div>
+    </header>
+    <!-- Fin Header -->
+
+    <main class="psAppPcte-historial--main">
+        <div class="psAppPcte-container">
+            
+            <!-- PS - App Paciente / Historial / Title -->
+            <div class="psAppPcte-historial--title">
+                <h2 class="psAppPcte-xlTitle">Historial</h2>
+            </div>
+
+            <!-- PS - App Paciente / Historial / Items -->
+            <div class="psAppPcte-historial--items">
+                <h3 class="psAppPcte-historial--items-title">Descuentos utilizados</h3>
+                <ul class="psAppPcte-historial--items-list">
+
+                    <!-- PS - App Paciente / Historial / Item 1 -->
+                    <li class="psAppPcte-historial--items-list-item">
+                        <div class="psAppPcte-historial--items-list-medicine">
+                            <div class="psAppPcte-historial--items-list-medicine-mainContent">
+                                <div>
+                                    <img src="assets/img/historial/psAppPcte-producto.png" alt="Historial Producto">
+                                    <div class="psAppPcte-historial--items-list-medicine-mainContent-content">
+                                        <h3 class="psAppPcte-historial--items-list-medicine-mainContent-content-productName">Geniol 30gr</h3>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-ultimaCompra">
+                                            <span>Última compra:</span>
+                                            <span>23/03/2021</span>
+                                        </div>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-cantidadTotal">
+                                            <span>Cantidad total:</span>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-mainContent-discount">37%</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-medicine-detailBar">
+                                <div class="psAppPcte-historial--items-list-medicine-detailBar-text">
+                                    <img src="assets/img/historial/psAppPcte-detail.svg" alt="Historial Detail">
+                                    <span>Ver detalle</span>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-detailBar-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="101" viewBox="0 0 162 101" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6005 4.1005C10.0678 -1.36683 18.9322 -1.36683 24.3995 4.1005L81 60.701L137.6 4.1005C143.068 -1.36683 151.932 -1.36683 157.399 4.1005C162.867 9.56785 162.867 18.4322 157.399 23.8995L81 100.299L4.6005 23.8995C-0.866835 18.4322 -0.866835 9.56785 4.6005 4.1005Z" fill="#CBD1E5"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="psAppPcte-historial--items-list-detail">
+                            <div class="psAppPcte-historial--items-list-detail-header">
+                                <span>F.Compra</span>
+                                <span>Farmacia</span>
+                                <span>Cantidad</span>
+                                <span>Resumen</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">21/02/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">ECO</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">2</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">3 de 20</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">23/01/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">Farmax</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">1</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">1 de 20</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- PS - App Paciente / Historial / Item 2 -->
+                    <li class="psAppPcte-historial--items-list-item">
+                        <div class="psAppPcte-historial--items-list-medicine">
+                            <div class="psAppPcte-historial--items-list-medicine-mainContent">
+                                <div>
+                                    <img src="assets/img/historial/psAppPcte-producto.png" alt="Historial Producto">
+                                    <div class="psAppPcte-historial--items-list-medicine-mainContent-content">
+                                        <h3 class="psAppPcte-historial--items-list-medicine-mainContent-content-productName">Geniol 30gr</h3>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-ultimaCompra">
+                                            <span>Última compra:</span>
+                                            <span>23/03/2021</span>
+                                        </div>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-cantidadTotal">
+                                            <span>Cantidad total:</span>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-mainContent-discount">37%</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-medicine-detailBar">
+                                <div class="psAppPcte-historial--items-list-medicine-detailBar-text">
+                                    <img src="assets/img/historial/psAppPcte-detail.svg" alt="Historial Detail">
+                                    <span>Ver detalle</span>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-detailBar-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="101" viewBox="0 0 162 101" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6005 4.1005C10.0678 -1.36683 18.9322 -1.36683 24.3995 4.1005L81 60.701L137.6 4.1005C143.068 -1.36683 151.932 -1.36683 157.399 4.1005C162.867 9.56785 162.867 18.4322 157.399 23.8995L81 100.299L4.6005 23.8995C-0.866835 18.4322 -0.866835 9.56785 4.6005 4.1005Z" fill="#CBD1E5"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="psAppPcte-historial--items-list-detail">
+                            <div class="psAppPcte-historial--items-list-detail-header">
+                                <span>F.Compra</span>
+                                <span>Farmacia</span>
+                                <span>Cantidad</span>
+                                <span>Resumen</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">21/02/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">ECO</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">2</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">3 de 20</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">23/01/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">Farmax</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">1</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">1 de 20</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- PS - App Paciente / Historial / Item 3 -->
+                    <li class="psAppPcte-historial--items-list-item">
+                        <div class="psAppPcte-historial--items-list-medicine">
+                            <div class="psAppPcte-historial--items-list-medicine-mainContent">
+                                <div>
+                                    <img src="assets/img/historial/psAppPcte-producto.png" alt="Historial Producto">
+                                    <div class="psAppPcte-historial--items-list-medicine-mainContent-content">
+                                        <h3 class="psAppPcte-historial--items-list-medicine-mainContent-content-productName">Geniol 30gr</h3>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-ultimaCompra">
+                                            <span>Última compra:</span>
+                                            <span>23/03/2021</span>
+                                        </div>
+                                        <div class="psAppPcte-historial--items-list-medicine-mainContent-content-cantidadTotal">
+                                            <span>Cantidad total:</span>
+                                            <span>3</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-mainContent-discount">37%</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-medicine-detailBar">
+                                <div class="psAppPcte-historial--items-list-medicine-detailBar-text">
+                                    <img src="assets/img/historial/psAppPcte-detail.svg" alt="Historial Detail">
+                                    <span>Ver detalle</span>
+                                </div>
+                                <span class="psAppPcte-historial--items-list-medicine-detailBar-arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="162" height="101" viewBox="0 0 162 101" fill="none">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.6005 4.1005C10.0678 -1.36683 18.9322 -1.36683 24.3995 4.1005L81 60.701L137.6 4.1005C143.068 -1.36683 151.932 -1.36683 157.399 4.1005C162.867 9.56785 162.867 18.4322 157.399 23.8995L81 100.299L4.6005 23.8995C-0.866835 18.4322 -0.866835 9.56785 4.6005 4.1005Z" fill="#CBD1E5"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="psAppPcte-historial--items-list-detail">
+                            <div class="psAppPcte-historial--items-list-detail-header">
+                                <span>F.Compra</span>
+                                <span>Farmacia</span>
+                                <span>Cantidad</span>
+                                <span>Resumen</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">21/02/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">ECO</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">2</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">3 de 20</span>
+                            </div>
+                            <div class="psAppPcte-historial--items-list-detail-row">
+                                <span class="psAppPcte-historial--items-list-detail-row-fCompra">23/01/2021</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-farmacia">Farmax</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-cantidad">1</span>
+                                <span class="psAppPcte-historial--items-list-detail-row-resumen">1 de 20</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+</body>
+<!-- Fin Pasaporte Salud App Paciente - Inicio -->
+
+</html>

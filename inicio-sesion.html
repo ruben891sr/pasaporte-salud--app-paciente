@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Inicio Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaporte Salud | App Paciente</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<!-- Fin Head -->
+
+<!-- PS - App Paciente / Inicio Sesión -->
+<body class="psAppPcte psAppPcte-inicioSesion">
+
+
+    <!-- Header -->
+    <header class="psAppPcte-inicioSesion--header">
+        <div class="psAppPcte-container">
+            <img class="psAppPcte-logo" src="assets/img/logo.jpg" alt="Logo Pasaporte Salud App Paciente">
+            <h2 class="psAppPcte-lTitle">¡Bienvenido!</h2>
+        </div>
+    </header>
+    <!-- Fin Header -->
+
+    <main class="psAppPcte-inicioSesion--main">
+        <div class="psAppPcte-container">
+        <!-- PS - App Paciente / Inicio Sesión / Form -->
+        <div class="psAppPcte-inicioSesion--wrapperForm">
+            <!-- Welcome Form -->
+            <form class="psAppPcte-inicioSesion--form" action="" name="" method="">
+
+                <!-- Welcome Form - Rut -->
+                <fieldset class="psAppPcte-inicioSesion--form-fieldset psAppPcte-inicioSesion-fieldsetRut">
+                    <label class="psAppPcte-inicioSesion--form-label" for="welcomeForm-rut">RUT o correo</label>
+                    <input class="psAppPcte-inicioSesion--form-inputRut wrong" type="text" name="" id="welcomeForm-rut" placeholder="Ingrese RUT o correo">
+                    <span class="psAppPcte-form-state wrong">Ingresa RUT válido</span>
+                </fieldset>
+
+                <!-- Welcome Form - Password -->
+                <fieldset class="psAppPcte-inicioSesion--form-fieldset psAppPcte-inicioSesion-fieldsetPass">
+                    <label class="psAppPcte-inicioSesion--form-label" for="welcomeForm-pass">Contraseña</label>
+                    <input class="psAppPcte-inicioSesion--form-inputPass wrong" id="welcomeForm-pass" type="password" minlength="4" maxlength="4" required placeholder="Ingrese contraseña">
+                    <i id="show-password" class="fa-regular fa-eye"></i> 
+                    <span class="psAppPcte-form-state wrong">Contraseña incorrecta</span>
+                </fieldset>
+
+                <!-- Welcome Form - Submit -->
+                <fieldset class="psAppPcte-inicioSesion--form-fieldset psAppPcte-inicioSesion-fieldsetSubmit">
+                    <input class="psAppPcte-inicioSesion--form-inputPass psAppPcte-mainButton" id="welcomeForm-submit" type="submit" value="Iniciar sesión">
+                    <button class="psAppPcte-secondButton">¿Olvidaste tu contraseña?</button>
+                </fieldset>
+                
+            </form>
+        </div>
+        <!-- FIN --- PS - App Paciente / Inicio Sesión / Form -->
+        </div>
+
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+</body>
+<!-- Fin Pasaporte Salud App Paciente - Inicio -->
+
+</html>

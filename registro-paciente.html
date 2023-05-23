@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Inicio Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaporte Salud | App Paciente</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<!-- Fin Head -->
+
+<!-- PS - App Paciente / Registro Paciente -->
+<body class="psAppPcte psAppPcte-regPcte">
+
+
+    <!-- Header -->
+    <header class="psAppPcte-regPcte--header">
+        <div class="psAppPcte-container">
+            <h2 class="psAppPcte-lTitle">Registro de paciente</h2>
+            <p>Ingresa tus datos en el formulario y accede a beneficios</p>
+    </header>
+    <!-- Fin Header -->
+
+    <main class="psAppPcte-regPcte--main">
+        <div class="psAppPcte-container">
+        <!-- PS - App Paciente / Registro Paciente / Form -->
+        <div class="psAppPcte-regPcte--wrapperForm">
+            <!-- Registro Paciente -->
+            <form class="psAppPcte-regPcte--form" action="" name="" method="">
+
+                <!-- Registro Paciente - Rut -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetRut">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Rut">Rut</label>
+                    <input class="psAppPcte-regPcte--form-inputRut wrong" type="text" name="" id="regPcte-Rut" placeholder="Ingrese rut">
+                    <span class="psAppPcte-form-state wrong">Ingresa un rut válido</span>
+                </fieldset>
+                
+                
+                <!-- Registro Paciente - Nombre -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetNombre">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Nombre">Nombre</label>
+                    <input class="psAppPcte-regPcte--form-inputNombre" type="text" name="" id="regPcte-Nombre" placeholder="Ingrese nombre">
+                </fieldset>
+                
+                
+                <!-- Registro Paciente - Apellido -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetApellido">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Apellido">Apellido</label>
+                    <input class="psAppPcte-regPcte--form-inputApellido" type="text" name="" id="regPcte-Apellido" placeholder="Ingrese apellido">
+                </fieldset>
+
+                
+                <!-- Registro Paciente - Correo -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetCorreo">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Correo">Correo</label>
+                    <input class="psAppPcte-regPcte--form-inputCorreo wrong" type="text" name="" id="regPcte-Correo" placeholder="Ingrese correo">
+                    <span class="psAppPcte-form-state wrong">Ingresa correo válido</span>
+                </fieldset>
+
+
+                 <!-- Registro Paciente - Fecha de nacimiento -->
+                 <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetFecha de nacimiento">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Fecha de nacimiento">Fecha de nacimiento</label>
+                    <input class="psAppPcte-regPcte--form-inputFecha de nacimiento" type="date" name="" id="regPcte-Fecha de nacimiento" placeholder="Ingrese Fecha de nacimiento">
+                    <span class="psAppPcte-form-stateInfo">Ejemplo: 23/12/1995</span>
+                </fieldset>
+
+
+                <!-- Registro Paciente - Telefono -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetTelefono">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Telefono">Telefono</label>
+                    <input class="psAppPcte-regPcte--form-inputTelefono" type="tel" name="" id="regPcte-Telefono" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required placeholder="+569 8866 7766">
+                </fieldset>
+
+
+                 <!-- Registro Paciente - Genero -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetGenero">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Genero">Genero</label>
+                    <select class="psAppPcte-regPcte--form-selectGenero" name="" id="regPcte-Genero" placeholder="Seleccione género">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+
+                    <!-- <span class="psAppPcte-form-state wrong">Ingresa género válido</span> -->
+                </fieldset>
+
+
+
+                 <!-- Registro Paciente - Contrasena -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetContrasena">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-Contrasena">Contraseña</label>
+                    <input class="psAppPcte-regPcte--form-inputContrasena" type="password" name="" id="regPcte-Contrasena" placeholder="Ingrese contraseña">
+                    <i id="show-password" class="fa-regular fa-eye"></i> 
+                    <!-- <span class="psAppPcte-form-state wrong">Ingresa contraseña válido</span> -->
+                </fieldset>
+
+
+
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetConfContrasena">
+                    <label class="psAppPcte-regPcte--form-label" for="regPcte-ConfContrasena">Confirmar contrasena</label>
+                    <input class="psAppPcte-regPcte--form-inputConfContrasena" type="password" name="" id="regPcte-ConfContrasena" placeholder="Repetir contraseña">
+                    <i id="show-password" class="fa-regular fa-eye"></i> 
+                    <!-- <span class="psAppPcte-form-state wrong">Contraseña incorrecta</span> -->
+                </fieldset>
+
+
+
+
+
+
+                <!-- Registro Paciente - Submit -->
+                <fieldset class="psAppPcte-regPcte--form-fieldset psAppPcte-regPcte-fieldsetSubmit">
+                    <input class="psAppPcte-regPcte--form-inputPass psAppPcte-mainButton" id="regPcte-submit" type="submit" value="Regístrate">
+                    <button class="psAppPcte-mainButton buttonUnactive">Volver</button>
+                </fieldset>
+                
+            </form>
+        </div>
+        <!-- FIN --- PS - App Paciente / Registro Paciente / Form -->
+        </div>
+
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+</body>
+<!-- Fin Pasaporte Salud App Paciente - Inicio -->
+
+</html>

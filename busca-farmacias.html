@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Inicio Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasaporte Salud | App Paciente</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"></link>
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css" />
+
+    <!-- Normalize -->
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<!-- Fin Head -->
+
+<!-- PS - App Paciente / Busca Farmacias -->
+<body class="psAppPcte psAppPcte-buscaMeds">
+
+
+    <!-- Header -->
+    <header class="psAppPcte--header">
+        <div class="psAppPcte-container">
+            <div class="psAppPcte--header-menu">
+                <img src="assets/img/header/psAppPcte-menu.svg" alt="Header Menu">
+                <div class="psAppPcte--header-menu-wrapper">
+                    <div class="psAppPcte--header-menu-content">
+                        <div class="psAppPcte--header-menu-close">
+                            <img src="assets/img/header/psAppPcte-close.svg" alt="Close">
+                        </div>
+                        <div class="psAppPcte--header-menu-items">
+                            <ul>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-descuentos.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Historial de descuentos</span>
+                                    </a>
+                                </li>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-busca-farmacia.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Busca tu farmacia</span>
+                                    </a>
+                                </li>
+                                <li class="psAppPcte--header-menu-item">
+                                    <a href="">
+                                        <img class="psAppPcte--header-menu-item-icon" src="assets/img/header/psAppPcte-busca-farmacia.png" alt="menu-item">
+                                        <span class="psAppPcte--header-menu-item-link">Busca tus farmacias</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="psAppPcte--header-menu-logout">
+                        <img src="assets/img/header/psAppPcte-cerrar-sesion.svg" alt="Cerrar sesión">
+                        <span>Cerrar sesión</span>
+                    </div>
+                </div>
+            </div>
+            <div class="psAppPcte--header-logo">
+                <img src="assets/img/psAppPcte-logo.jpg" alt="Logo Pasaporte Salud App Paciente">
+            </div>
+            <div class="psAppPcte--header-user">
+                <span class="psAppPcte--header-user-firstName">J</span>
+                <span class="psAppPcte--header-user-lastName">R</span>
+            </div>
+    </header>
+    <!-- Fin Header -->
+
+    <main class="psAppPcte-buscaMeds--main">
+        <div class="psAppPcte-container">
+
+            <!-- PS - App Paciente / Busca Farmacias / Titulo y Descarga -->
+            <div class="psAppPcte-buscaMeds--titleIcon">
+                <h2 class="psAppPcte-buscaMeds--title psAppPcte-xlTitle">Busca tu farmacias</h2>
+                <span class="psAppPcte-buscaMeds--icon">
+                    <img src="assets/img/busca-farmacias/psAppPaciente--download.svg" alt="Download">
+                </button>
+            </div>
+
+            <!-- PS - App Paciente / Busca Farmacias / Search -->
+            <div class="psAppPcte-buscaMeds--search">
+                <form action="">
+                    <input type="text" placeholder="Ingresa nombre">
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+
+            <!-- PS - App Paciente / Busca Farmacias / Filtro, Resultados-->
+            <div class="psAppPcte-buscaMeds--filterBar">
+                <div class="psAppPcte-buscaMeds--filterBar-filter">
+                    <div class="psAppPcte-buscaMeds--filterBar-filter-button">
+                        <img src="assets/img/busca-medicamentos/psAppPaciente--filter.svg" alt="Filter">
+                        <span>Filtrar</span>
+                    </div>
+                    <div class="psAppPcte-buscaMeds--filter">
+                        <div class="psAppPcte-buscaMeds--filterWrapper">
+                            <div class="psAppPcte-buscaMeds--filterClose">
+                                <img src="assets/img/header/psAppPcte-close.svg" alt="Close">
+                            </div>
+                            <h3 class="psAppPcte-xlTitle">Filtrar por:</h3>
+                            <div class="psAppPcte-buscaMeds--filter-region">
+                                <h4>Seleccione región:</h4>
+                                <select name="" id="">
+                                    <option value="region-metropolitana">Región metropolitana</option>
+                                    <option value="region-1">Región 1</option>
+                                    <option value="region-2">Región 2</option>
+                                    <option value="region-3">Región 3</option>
+                                    <option value="region-4">Región 4</option>
+                                    <option value="region-5">Región 5</option>
+                                    <option value="region-6">Región 6</option>
+                                </select>
+                            </div>
+                            <div class="psAppPcte-buscaMeds--filter-comuna">
+                                <h4>Seleccione comuna:</h4>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+                                <div class="psAppPcte-buscaMeds--filter-comuna-group">
+                                    <input type="checkbox" id="" value="la-florida">
+                                    <label for="">La Florida</label>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="psAppPcte-buscaMeds--filterBar-results">
+                    <span>Resultados:</span>
+                    <span>(32)</span>
+                </div>
+                <div class="psAppPcte-buscaMeds--filterBar-grid">
+                    <img class="psAppPcte-buscaMeds--filterBar-grid-grid showGrid" src="assets/img/busca-medicamentos/psAppPaciente--grid.svg" alt="Grid">
+                    <img class="psAppPcte-buscaMeds--filterBar-grid-gridH" src="assets/img/busca-medicamentos/psAppPaciente--gridH.svg" alt="Grid2">
+                </div>
+            </div>
+
+            <!-- PS - App Paciente / Busca Farmacias / Productos -->
+            <div class="psAppPcte-buscaMeds-farm">
+                <ul>
+
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="psAppPcte-buscaMeds-farm-items">
+                        <div class="psAppPcte-buscaMeds-farm-image">
+                            <img src="assets/img/busca-farmacias/psAppPaciente--carmen.png" alt="Farmacia 1">
+                        </div>
+                        <div class="psAppPcte-buscaMeds-farm-list">
+                            <ul>
+                                <li class="psAppPcte-buscaMeds-farm-list-ubicacion">
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbicacion.png" alt="farmUbicacion">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-ubicacion-content">
+                                        <span>Avenida Parque del Este Nº2376, Santiago Centro</span>
+                                        <a href="">Ver mapa</a>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-horarios">
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--horario.png" alt="horarios">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-horarios-content">
+                                        <ul>
+                                            <li>
+                                                <span>Lunes a viernes</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Sábado</span>
+                                                <span>09:00 a 14:00 hrs</span>
+                                            </li>
+                                            <li>
+                                                <span>Domingo y festivos</span>
+                                                <span>Cerrado</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="psAppPcte-buscaMeds-farm-list-telefono">
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-icon">
+                                        <img src="assets/img/busca-farmacias/psAppPcte--farmUbi.png" alt="telefono">
+                                    </div>
+                                    <div class="psAppPcte-buscaMeds-farm-list-telefono-content">
+                                        <a href="tel:56978652345">+569 7865 2345</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- PS - App Paciente / Busca Farmacias / Paginador -->
+            <div class="psAppPcte-buscaMeds-pages">
+                <div class="psAppPcte-buscaMeds-pages-anterior">
+                    <span class="psAppPcte-buscaMeds-pages-anterior-primero"><<</span>
+                    <span class="psAppPcte-buscaMeds-pages-anterior-anterior"><</span>
+                </div>
+                <div class="psAppPcte-buscaMeds-pages-actual">1</div>
+                <div class="psAppPcte-buscaMeds-pages-siguiente">
+                    <span class="psAppPcte-buscaMeds-pages-siguiente-previo">></span>
+                    <span class="psAppPcte-buscaMeds-pages-siguiente-ultimo">>></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+
+</body>
+<!-- Fin Pasaporte Salud App Paciente - Inicio -->
+
+</html>
